@@ -1,113 +1,69 @@
-<![CDATA[<div align="center">
+# NotaryNode
 
-```
-███╗   ██╗ ██████╗ ████████╗ █████╗ ██████╗ ██╗   ██╗
-████╗  ██║██╔═══██╗╚══██╔══╝██╔══██╗██╔══██╗╚██╗ ██╔╝
-██╔██╗ ██║██║   ██║   ██║   ███████║██████╔╝ ╚████╔╝ 
-██║╚██╗██║██║   ██║   ██║   ██╔══██║██╔══██╗  ╚██╔╝  
-██║ ╚████║╚██████╔╝   ██║   ██║  ██║██║  ██║   ██║   
-╚═╝  ╚═══╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝  
-```
+> **The Immutable Truth for Your Digital Assets.**
 
-### ⛓️ The Immutable Truth for Your Digital Assets.
+Notarize documents, certificates, and IP on the blockchain. Instant proof. Zero data storage. 100% Private.
 
-**Notarize documents, certificates, and IP on the blockchain.**  
-**Instant proof. Zero data storage. 100% Private.**
-
-[![Next.js](https://img.shields.io/badge/Next.js-16-000?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-363636?style=flat-square&logo=solidity)](https://soliditylang.org/)
-[![Polygon](https://img.shields.io/badge/Polygon-Amoy_Testnet-8247E5?style=flat-square&logo=polygon)](https://polygon.technology/)
-[![License](https://img.shields.io/badge/License-MIT-33ff00?style=flat-square)](#license)
-
-</div>
+![Next.js](https://img.shields.io/badge/Next.js-16-000?style=flat-square&logo=next.js)
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-363636?style=flat-square&logo=solidity)
+![Polygon](https://img.shields.io/badge/Polygon-Amoy_Testnet-8247E5?style=flat-square&logo=polygon)
+![License](https://img.shields.io/badge/License-MIT-33ff00?style=flat-square)
 
 ---
 
-## 📸 Interface
-
-<div align="center">
+## Interface
 
 ![NotaryNode Interface](public/notary.webp)
 
-</div>
-
 ---
 
-## 🧠 What is NotaryNode?
+## What is NotaryNode?
 
 NotaryNode is a **decentralized evidence management** web application that allows users to prove the existence of any digital file at a specific point in time — **without ever uploading the file itself**.
 
 It works by generating a **SHA-256 cryptographic fingerprint** of your file entirely in the browser, then storing that fingerprint on the **Polygon Amoy blockchain** with an immutable timestamp. The actual file never leaves your machine.
 
-```
-┌─────────────────────────────┐
-│     YOUR BROWSER            │
-│     ┌─────────────────┐     │
-│     │  FILE → SHA-256  │     │
-│     └────────┬────────┘     │
-│              │  hash only   │
-│              ▼              │
-│     ┌─────────────────┐     │
-│     │   BLOCKCHAIN    │     │
-│     └─────────────────┘     │
-└─────────────────────────────┘
-```
-
-> **Zero bytes of your file are ever sent to any server.** Open Chrome DevTools → Network tab during upload to verify.
+> **Zero bytes of your file are ever sent to any server.** Open Chrome DevTools Network tab during upload to verify.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 🔐 **Client-Side Hashing** | SHA-256 fingerprint generated locally via Web Crypto API |
-| 🦊 **MetaMask Integration** | One-click wallet connection with auto network switching |
-| ⛓️ **On-Chain Proof** | Immutable timestamp stored on Polygon Amoy Testnet |
-| 🔍 **Instant Verification** | Re-upload any file to check if it was previously notarized |
-| 🖥️ **Terminal CLI UI** | Cinematic hacker aesthetic with CRT scanlines & ASCII art |
-| 🎬 **Framer Motion** | Typewriter headlines, glitch effects, and smooth transitions |
-| 📱 **Responsive** | Works on desktop and mobile devices |
-| 🛡️ **Zero Data Storage** | No servers, no databases, no file uploads |
+| **Client-Side Hashing** | SHA-256 fingerprint generated locally via Web Crypto API |
+| **MetaMask Integration** | One-click wallet connection with auto network switching |
+| **On-Chain Proof** | Immutable timestamp stored on Polygon Amoy Testnet |
+| **Instant Verification** | Re-upload any file to check if it was previously notarized |
+| **Terminal CLI UI** | Cinematic hacker aesthetic with CRT scanlines and ASCII art |
+| **Framer Motion** | Typewriter headlines, glitch effects, and smooth transitions |
+| **Responsive** | Works on desktop and mobile devices |
+| **Zero Data Storage** | No servers, no databases, no file uploads |
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
-```
-$ notarynode --list-modules
-
-> 🎓 --verify-degree      Digital Certificates
-> 🏠 --trace-ownership    Property Records
-> 💡 --prove-invention    Patents & IP
-> ⚖️ --lock-timestamp     Legal Contracts
-> 🛡️ --verify-origin      Product Authentication
-> 📜 --seal-evidence      Evidence Archiving
-```
+- **Digital Certificates** — Verify university degrees and diplomas
+- **Property Records** — Immutable ownership trails for real estate
+- **Patents and IP** — Prove "First to Invent" without exposing secrets
+- **Legal Contracts** — Prevent back-dating of agreements
+- **Product Authentication** — Verify luxury goods and warranties
+- **Evidence Archiving** — Tamper-proof digital evidence for courts
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-```
-FRONTEND ──────────────────────────────
-  Next.js 16        // React framework
-  Tailwind CSS 4    // Utility-first CSS
-  Framer Motion     // Animations
-  Lucide Icons      // Icon library
+**Frontend:** Next.js 16, Tailwind CSS 4, Framer Motion, Lucide Icons
 
-WEB3 ──────────────────────────────────
-  Ethers.js 6       // Blockchain interaction
-  MetaMask          // Wallet authentication
-  Solidity ^0.8.20  // Smart contract
+**Web3:** Ethers.js 6, MetaMask, Solidity ^0.8.20
 
-NETWORK ───────────────────────────────
-  Polygon Amoy      // Testnet (Chain ID: 80002)
-```
+**Network:** Polygon Amoy Testnet (Chain ID: 80002)
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -146,7 +102,7 @@ The Solidity contract is located at `contracts/Notary.sol`. To deploy:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 NotaryNode/
@@ -168,7 +124,7 @@ NotaryNode/
 
 ---
 
-## 📜 Smart Contract
+## Smart Contract
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -177,7 +133,11 @@ pragma solidity ^0.8.20;
 contract Notary {
     mapping(bytes32 => uint256) public proofs;
 
-    event Notarized(address indexed owner, bytes32 indexed fileHash, uint256 timestamp);
+    event Notarized(
+        address indexed owner,
+        bytes32 indexed fileHash,
+        uint256 timestamp
+    );
 
     function notarize(bytes32 _hash) public {
         require(proofs[_hash] == 0, "File has already been notarized");
@@ -191,29 +151,28 @@ contract Notary {
 }
 ```
 
-**Deployed on Polygon Amoy:**  
-`0x66e7dEFCeca8351d088958011D0e2e79700d01Cc`
+**Deployed on Polygon Amoy:** `0x66e7dEFCeca8351d088958011D0e2e79700d01Cc`
 
 ---
 
-## 🧪 Testing
+## Testing
 
 | Test | How to Verify |
 |---|---|
-| **Privacy Proof** | Open DevTools → Network tab during file upload. **Zero bytes** are transmitted. |
+| **Privacy Proof** | Open DevTools Network tab during file upload. Zero bytes transmitted. |
 | **Wallet Connection** | MetaMask connects and auto-switches to Polygon Amoy. |
-| **Notarization** | Upload file → Seal → Transaction confirmed on [Polygonscan](https://amoy.polygonscan.com/). |
-| **Immutability** | Re-upload same file → Shows original timestamp. Modify 1 byte → Shows "not found". |
+| **Notarization** | Upload file, seal, transaction confirmed on Polygonscan. |
+| **Immutability** | Re-upload same file shows original timestamp. Modify 1 byte shows "not found". |
 
 ---
 
-## 🏗️ Build for Production
+## Build for Production
 
 ```bash
 npm run build
 ```
 
-Deploy to [Vercel](https://vercel.com/) for instant hosting:
+Deploy to Vercel for instant hosting:
 
 ```bash
 npx vercel
@@ -221,23 +180,10 @@ npx vercel
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**.
 
 ---
 
-<div align="center">
-
-```
-─────────────────────────────────────────
-  © 2026 Hariom Phogat
-  NotaryNode — Decentralized Evidence Management
-  network: polygon amoy // chain_id: 80002
-─────────────────────────────────────────
-```
-
-**Built with ☕ and Blockchain**
-
-</div>
-]]>
+**© 2026 Hariom Phogat — NotaryNode: Decentralized Evidence Management**
